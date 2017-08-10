@@ -8,7 +8,7 @@ provides a firmware upload mechanism.
 OTA Server requires Python 3 (>= 3.4) and can be installed with
 [pip](https://github.com/pypa/pip). So you have to install pip for Python 3:
 ```
-    $ wget -qO - https://bootstrap.pypa.io/get-pip.py | sudo python3
+    $ curl -O https://bootstrap.pypa.io/get-pip.py; sudo python3 get-pip.py
 ```
 
 First clone this repository:
@@ -19,13 +19,14 @@ First clone this repository:
 Then install OTA server:
 ```
     $ cd ota-server
-    $ sudo pip install .
+    $ pip install --user .
 ```
 
 Finally install the Node modules required (you need to install
 [npm](https://www.npmjs.com/get-npm) first):
 ```
     $ cd ota-server/otaserver/static
+    $ mkdir uploads
     $ npm install
 ```
 
